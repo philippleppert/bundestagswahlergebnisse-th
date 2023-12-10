@@ -3,7 +3,7 @@ source("header.R")
 
 # UI
 ui <- fluidPage(
-  
+  title = "Bundestagswahlergebnisse TH",
   # App Titel
   fluidRow(
     column(
