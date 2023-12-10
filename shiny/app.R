@@ -8,18 +8,18 @@ ui <- fluidPage(
   fluidRow(
     column(
       12, 
-      tags$p("Bundestagswahlergebnisse Thüringen", fa("envelope", fill = "#0089c1"),  style="font-size: 50px;")
+      tags$p("Bundestagswahlergebnisse Thüringen", fa("envelopes-bulk", fill = "#0089c1"),  style="font-size: 50px;")
     ) 
   ),
   
-  # source
-  tags$h6(HTML("Quelle: Thüringer Landesamt für Statistik")),
+  br(),
   
   # App Layout
   sidebarLayout(
     
     sidebarPanel(
-      
+      # source
+      tags$p(HTML("Quelle: Thüringer Landesamt für Statistik"), style = "text-align: center; font-size: 12px;"),
       ## Eingaben
       fluidRow(
         column(
@@ -43,7 +43,7 @@ ui <- fluidPage(
           "Gemeinden" = 3, 
           "Stadt-/Ortsteile" = 4
           ),
-        selected = 1, inline = T
+        selected = 1, inline = F
         ),
 
       # Input: Wahlkreis
@@ -59,7 +59,14 @@ ui <- fluidPage(
       uiOutput("otSelection"),
       
       tags$hr()
-       )
+      ),
+      tags$style(type = "text/css", ".center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+      }"),
+      img(src='logo.jpg', class = "center")
       )
     ),
     
@@ -82,7 +89,7 @@ ui <- fluidPage(
           br(),
           plotOutput(outputId = "barplot_zweitstimmen")
           )
-        )
+        ),
       )
     )
   )
