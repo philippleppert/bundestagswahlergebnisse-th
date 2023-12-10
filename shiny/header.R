@@ -1,5 +1,6 @@
 library(shiny)
-library(tidyverse)
+library(dplyr)
+library(ggplot2)
 library(dqshiny) # for autocomplete_input
 library(fontawesome)
 
