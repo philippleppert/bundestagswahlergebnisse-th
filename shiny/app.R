@@ -28,7 +28,7 @@ ui <- fluidPage(
           tags$style(type = "text/css", ".irs-grid-pol.small {height: 0px;}"),
           sliderInput(
             inputId = "jahr", label = "Welches Wahljahr soll betrachtet werden?",
-            min = 2005, max = 2021, value = 2021, step = 4,
+            min = 2005, max = 2025, value = 2025, step = 4,
             ticks = TRUE, sep = ""
             ),
       

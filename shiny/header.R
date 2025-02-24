@@ -29,7 +29,11 @@ partei_farben <- c(
   "#0099CC",
   # Basis
   "#00FFFF",
-  # BGE
+  # BGE,
+  "#7F00FF",
+  # BSW
+  "#ffc0cb",
+  # Buendnis Deutschland
   "#000000",
   # CDU
   "#990033",
